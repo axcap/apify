@@ -3,14 +3,23 @@
     "version": "0.1.0",
     "private": true,
     "scripts": {
+        "nodemon": "nodemon",
         "dev": "next dev",
         "build": "next build",
         "start": "next start",
         "export": "next export"
     },
     "dependencies": {
+        "@emotion/core": "^10.0.35",
+        "@emotion/is-prop-valid": "^0.8.8",
+        "@emotion/styled": "^10.0.27",
+        "emotion-theming": "^10.0.27",
+        "mineral-ui": "^0.58.0",
         "next": "9.5.5",
-        "react": "16.13.1",
-        "react-dom": "16.13.1"
+        "react": "^16.13.1",
+        "react-dom": "^16.13.1"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.4"
     }
 }
