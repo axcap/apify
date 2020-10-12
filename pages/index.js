@@ -1,13 +1,25 @@
+import Card, { CardActions, CardBlock, CardDivider, CardFooter, CardImage, CardTitle } from 'mineral-ui/Card';
+import { ThemeProvider } from 'mineral-ui/themes';
+import styles from '../styles/Home.module.css'
+
 function HomePage({ posts }) {
     return (
-        <div>
-            <div>Welcome to Next.js!</div>
-            <ul>
-            {posts.map((post) => (
-                <li>{post.body}</li>
-            ))}
-            </ul>
-        </div>
+        <ThemeProvider>
+            <div className={styles.container}>
+                <h1 className={styles.title}>
+                    Welcome to Apify!
+                </h1>
+                <div>
+                    {posts.map((post) => (
+                        <Card onClick={event => console.log(event)}>
+                            <CardTitle>{post.name}</CardTitle>
+                            <CardBlock>{post.body}</CardBlock>
+                            <CardFooter> {post.email}</CardFooter>
+                        </Card>
+                    ))}
+                </div>
+            </div>
+        </ThemeProvider>
       )
   }
 
